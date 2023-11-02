@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:music_zone/models/song_model.dart';
 import 'package:music_zone/widgets/colors.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -25,6 +26,18 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
           ),
         ],
+      ),
+
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            ListView.builder(
+              itemCount: songs.length,
+              itemBuilder: (context, index) {
+              final song = songs[index];
+            })
+          ],
+        ),
       ),
     );
   }
