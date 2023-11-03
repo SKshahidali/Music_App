@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:music_zone/models/song_model.dart';
+import 'package:music_zone/components/recommendations.dart';
 import 'package:music_zone/widgets/colors.dart';
+import 'package:music_zone/widgets/searchbar.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -16,10 +17,10 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar:AppBar(  
         backgroundColor: Colors.transparent,
         elevation: 0,
-        leading: Icon(Icons.window_rounded,color: yellow,size: 30,),
-        actions: [
+        leading: const Icon(Icons.window_rounded,color: yellow,size: 30,),
+        actions: const [
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15.0,vertical: 8),
+            padding: EdgeInsets.symmetric(horizontal: 15.0,vertical: 8),
             child: CircleAvatar(
               backgroundImage:NetworkImage('https://img.freepik.com/premium-photo/cartoon-character-with-glasses-red-shirt-that-says-i-m-boy_771335-49728.jpg?w=740'),
               backgroundColor: Colors.transparent,
@@ -29,14 +30,15 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
 
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            ListView.builder(
-              itemCount: songs.length,
-              itemBuilder: (context, index) {
-              final song = songs[index];
-            })
-          ],
+        child: Padding(
+          padding: const EdgeInsets.all(18.0),
+          child: Column(
+            children: const [
+               SearchBar(),
+               SizedBox(height: 40,),
+               RecommendedSongs()
+            ],
+          ),
         ),
       ),
     );
