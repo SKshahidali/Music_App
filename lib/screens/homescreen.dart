@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:music_zone/components/playlists.dart';
 import 'package:music_zone/components/recommendations.dart';
 import 'package:music_zone/widgets/colors.dart';
+import 'package:music_zone/widgets/navbar.dart';
 import 'package:music_zone/widgets/searchbar.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -28,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
-
+      bottomNavigationBar: CustomNavBar(),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(18.0),
@@ -36,7 +38,9 @@ class _HomeScreenState extends State<HomeScreen> {
             children: const [
                SearchBar(),
                SizedBox(height: 40,),
-               RecommendedSongs()
+               RecommendedSongs(),
+               SizedBox(height: 40,),
+               PlayLists()
             ],
           ),
         ),

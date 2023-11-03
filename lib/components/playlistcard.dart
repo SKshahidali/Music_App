@@ -1,22 +1,22 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:music_zone/models/song_model.dart';
+import 'package:music_zone/models/playlist_model.dart';
 
+class PlayListCard extends StatelessWidget {
+  const PlayListCard({super.key,required this.playlist});
 
-class SongCard extends StatelessWidget {
-  const SongCard({super.key, required this.song});
-  final Song song;
+  final Playlist playlist;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(right: 18.0),
       child: Container(
-        width: MediaQuery.of(context).size.width * 0.45,
+        width: MediaQuery.of(context).size.width * 0.75,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           image: DecorationImage(
-            image: AssetImage(song.coverimageurl),
+            image: AssetImage(playlist.cover),
             fit: BoxFit.cover,
           ),
         ),
@@ -34,7 +34,7 @@ class SongCard extends StatelessWidget {
                     color: Colors.black.withOpacity(0.1),
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
-                      song.title,
+                      playlist.PlaylistName,
                       style: const TextStyle(
                         color: Colors.white,
                         fontSize: 16,
@@ -55,7 +55,7 @@ class SongCard extends StatelessWidget {
                     color: Colors.black.withOpacity(0.5),
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
-                      song.artist,
+                      playlist.SongNumbers,
                       style: const TextStyle(
                         color: Colors.white,
                         fontSize: 14,
