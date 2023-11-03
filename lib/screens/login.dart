@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:music_zone/home.dart';
 import 'package:music_zone/screens/homescreen.dart';
 import 'package:music_zone/widgets/colors.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -113,7 +114,7 @@ class _LoginPageState extends State<LoginPage> {
                     )
                   ),
                   onPressed: (){
-                    Navigator.pushReplacement(context,MaterialPageRoute(builder: (context) => HomeScreen()),
+                    Navigator.pushReplacement(context,MaterialPageRoute(builder: (context) => Home()),
           );
                   },
                    child:Text("Sign In",style:GoogleFonts.poppins(fontSize: 16,fontWeight: FontWeight.w600,color: Colors.black),)),
