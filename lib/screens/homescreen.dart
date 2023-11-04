@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:music_zone/components/artist.dart';
 import 'package:music_zone/components/playlists.dart';
 import 'package:music_zone/components/recommendations.dart';
 import 'package:music_zone/models/playlist_model.dart';
@@ -23,7 +24,9 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Padding(
           padding: const EdgeInsets.all(18.0),
           child: Column(
-            children:  [
+            children: const  [
+              Trending(),
+              SizedBox(height: 40,),
                SearchBar(),
                SizedBox(height: 40,),
                RecommendedSongs(),
