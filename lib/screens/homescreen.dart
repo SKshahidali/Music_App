@@ -19,7 +19,22 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(backgroundColor: grey,
+    return Scaffold(
+      appBar: AppBar(  
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        leading: const Icon(Icons.window_rounded,color: yellow,size: 30,),
+        actions: const [
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 15.0,vertical: 8),
+            child: CircleAvatar(
+              backgroundImage:NetworkImage('https://img.freepik.com/premium-photo/cartoon-character-with-glasses-red-shirt-that-says-i-m-boy_771335-49728.jpg?w=740'),
+              backgroundColor: Colors.transparent,
+              ),
+          ),
+        ],
+      ),
+      backgroundColor: grey,
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(18.0),
