@@ -28,7 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 15.0,vertical: 8),
             child: CircleAvatar(
-              backgroundImage:NetworkImage('https://img.freepik.com/premium-photo/cartoon-character-with-glasses-red-shirt-that-says-i-m-boy_771335-49728.jpg?w=740'),
+              backgroundImage:AssetImage('assets/logos/profile image.webp'),
               backgroundColor: Colors.transparent,
               ),
           ),
