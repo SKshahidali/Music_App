@@ -31,9 +31,22 @@ class _ProfilePageState extends State<ProfilePage> {
         children: [
           Center(child: Text("My profile",style: GoogleFonts.poppins(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 18),)),
           const SizedBox(height: 20,),
+
+          // Profle Image //
           CircleAvatar(
             radius: 75,
-            backgroundImage: AssetImage('assets/logos/profile image.webp'))
+            backgroundImage: profileimage),
+            const SizedBox(height: 30,),
+            //Name of the user //
+            Column(
+              mainAxisAlignment:MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text("SK Shahid Ali",style: GoogleFonts.poppins(fontWeight: FontWeight.bold,fontSize: 19,color: Colors.white),),
+                Text("@SKshahidali",style: GoogleFonts.poppins(fontWeight: FontWeight.w600,fontSize: 15,color: Colors.white),)
+              ],
+            )
+            
         ],
       ),
     );

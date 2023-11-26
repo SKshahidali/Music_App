@@ -16,3 +16,6 @@ const yellowgradient = LinearGradient(
     Color(0xFFFFC02E),
    
 ]);
+
+const profileimage = AssetImage('assets/logos/profile image.webp');
+const logo = 'assets/images/logo.png';
