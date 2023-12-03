@@ -37,6 +37,8 @@ class _ProfilePageState extends State<ProfilePage> {
             radius: 75,
             backgroundImage: profileimage),
             const SizedBox(height: 30,),
+
+            
             //Name of the user //
             Column(
               mainAxisAlignment:MainAxisAlignment.center,
